@@ -64,7 +64,8 @@ namespace Dungeon
         protected int _competencePoints;
         public int CompetencePoints { get { return _competencePoints; } set { _competencePoints = value; } }
 
-
+        protected int _gold;
+        public int Gold { get { return _gold; }  set { _gold = (value <= 0) ? 0 : value;} }
 
         public Player(int life, int strength) : base(life, strength)
         {
