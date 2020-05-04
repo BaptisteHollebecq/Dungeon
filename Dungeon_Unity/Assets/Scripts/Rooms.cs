@@ -20,6 +20,10 @@ public class Rooms : MonoBehaviour
             {
                 Enemies.Add(new Enemy(Random.Range(5, 15), Random.Range(5, 15)));
             }
+            if (Random.Range(0,101) < 30)
+            {
+                bed = true;
+            }
         }
     }
 }

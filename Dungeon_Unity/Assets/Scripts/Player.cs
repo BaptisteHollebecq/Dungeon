@@ -161,7 +161,7 @@ public class Player : Character
                     Sleep();
                     break;
                 }
-            case "Use":
+            case "use":
                 {
                     hud.Print("Not Implemented yet");
                     StartCoroutine(hud.DoSmthing(1));
@@ -213,14 +213,14 @@ public class Player : Character
     {
         if (!_canSleep || currentRoom.Enemies.Count != 0)
         {
-            hud.Print("There is no bed to sleep here");
+            hud.Print("You can't sleep here");
             StartCoroutine(hud.DoSmthing(2));
         }
         else
         {
             hud.Print("You regain some Hp but you broke the bed ");
             currentRoom.bed = false;
-            Life += 3;
+            Life += 5;
             StartCoroutine(hud.DoSmthing(2));
         }
     }
@@ -244,7 +244,7 @@ public class Player : Character
 
     IEnumerator Fight(Enemy enemy)
     {
-        while (Life >= 0 && enemy.Life >= 0)
+        while (Life > 0 && enemy.Life > 0)
         {
             yield return new WaitUntil(() => _did);
             if (_attacking)
@@ -305,11 +305,12 @@ public class Player : Character
         }
         else
         {
+            Debug.Log("sorry");
             _gold += enemy.Gold;
             Experience += enemy.Experience;
-            hud.DelayPrint("You win the fight, " + enemy.Gold+ " gold et " + enemy.Experience+ " points d'experiences\nYou are now Level" + _level, 1);
+            StartCoroutine(hud.DelayPrint("You win the fight, " + enemy.Gold+ " gold et " + enemy.Experience+ " points d'experiences\nYou are now Level" + _level, 1));
             currentRoom.Enemies.RemoveAt(0);
-            StartCoroutine(hud.DoSmthing(8));
+            StartCoroutine(hud.DoSmthing(5));
             yield return null;
         }
         yield return null;
