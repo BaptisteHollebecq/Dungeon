@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoomsTemplate
       objectReference: {fileID: 0}
+    - target: {fileID: 564901848955339375, guid: 6f7164d1ae607214f9cc83f40c31e728,
+        type: 3}
+      propertyPath: m_TagString
+      value: GameManager
+      objectReference: {fileID: 0}
     - target: {fileID: 564901848955339373, guid: 6f7164d1ae607214f9cc83f40c31e728,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -324,6 +329,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823240189428584281, guid: 5c73edaad0b494048a75f9c601d571ab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440843151820900711, guid: 5c73edaad0b494048a75f9c601d571ab,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991960307712270536, guid: 5c73edaad0b494048a75f9c601d571ab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991960307712270536, guid: 5c73edaad0b494048a75f9c601d571ab,
+        type: 3}
+      propertyPath: m_TagString
+      value: GameManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c73edaad0b494048a75f9c601d571ab, type: 3}

@@ -66,6 +66,11 @@ public class Player : Character
             _canUse = true;
 
 
+        if (Input.GetButtonDown("Cancel"))
+        {
+            Application.Quit();
+        }
+
         if (_moving)
         {
             if (Input.GetButtonDown("Up"))

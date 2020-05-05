@@ -58,6 +58,7 @@ public class TEXTS : MonoBehaviour
         Print("You Win this game");
         inputFieldbase.gameObject.SetActive(false);
         inputFieldAttack.gameObject.SetActive(false);
+        StartCoroutine(CloseGame());
     }
 
     public IEnumerator Loose(float n)
@@ -66,5 +67,15 @@ public class TEXTS : MonoBehaviour
         Print("You Loose this game");
         inputFieldbase.gameObject.SetActive(false);
         inputFieldAttack.gameObject.SetActive(false);
+        StartCoroutine(CloseGame());
     }
+
+
+    public IEnumerator CloseGame()
+    {
+        yield return new WaitForSeconds(2);
+          
+        Application.Quit();
+    }
+
 }
