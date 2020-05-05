@@ -67,3 +67,4 @@ MonoBehaviour:
     type: 3}
   rooms: []
   Items: []
+  waitTime: 2
